@@ -23,12 +23,22 @@ app.get('/contatos', function(req, res) {
   res.json(data.contatos);
 });
 
+app.get('/contatos/:id', function(req, res) {
+  res.json(data.contatos[req.params.id]);
+});
+
 app.post('/contatos', function(req, res) {
   try {
     // recupera o contato da requisicao
     const contato = req.body;
 
     // salva o contato no array de contatos
+    var id = data.contatos.length || 1;
+
+    //adiciona um id ao contato
+    contato.id = id;
+
+    // adiciona o contato ao array de contatos
     data.contatos.push(contato);
     
     // retorna o status sucess verdadeiro e o contato que foi salvo

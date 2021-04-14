@@ -1,9 +1,9 @@
 const data = {};
 
 data.contatos = [
-  {nome: 'Pedro', telefone:'77777777', cor: 'orange', data: new Date(), operadora: { nome:'Oi', cod: 14, categoria:'Celular'} },
-  {nome: 'Maria', telefone:'88888888', cor: 'red', data: new Date(), operadora: { nome:'Vivo', cod: 15, categoria:'Celular'} },
-  {nome: 'José', telefone:'99999999',cor: 'cyan', data: new Date(), operadora: { nome:'Tim', cod: 41, categoria:'Celular'} }
+  {id: 1, nome: 'Pedro', telefone:'77777777', cor: 'orange', data: new Date(), operadora: { nome:'Oi', cod: 14, categoria:'Celular'} },
+  {id: 2, nome: 'Maria', telefone:'88888888', cor: 'red', data: new Date(), operadora: { nome:'Vivo', cod: 15, categoria:'Celular'} },
+  {id: 3, nome: 'José', telefone:'99999999',cor: 'cyan', data: new Date(), operadora: { nome:'Tim', cod: 41, categoria:'Celular'} }
 ];
 
 data.operadoras = [
