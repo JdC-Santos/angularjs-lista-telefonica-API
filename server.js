@@ -31,9 +31,12 @@ app.get('/contatos/:id', function(req, res) {
   });
 
   // se encontrou o contato, retorna ele, caso contrario retorna um objeto vazio
-  contato = (contato.length) ?contato[0] : {};
-  
-  res.json(contato);
+
+  if (contato.length) {
+    res.json(contato[0]);
+  } else {
+    res.status(404).json({msg:'página nao encontrada'});
+  }  
 });
 
 app.post('/contatos', function(req, res) {
