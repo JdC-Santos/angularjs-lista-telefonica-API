@@ -24,7 +24,16 @@ app.get('/contatos', function(req, res) {
 });
 
 app.get('/contatos/:id', function(req, res) {
-  res.json(data.contatos[req.params.id]);
+  
+  // percorre o array procurando o contato com o id requisitado
+  contato = data.contatos.filter(function(contato) {
+    return (contato.id == req.params.id);
+  });
+
+  // se encontrou o contato, retorna ele, caso contrario retorna um objeto vazio
+  contato = (contato.length) ?contato[0] : {};
+  
+  res.json(contato);
 });
 
 app.post('/contatos', function(req, res) {
